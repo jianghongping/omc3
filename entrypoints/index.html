@@ -1,0 +1,676 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Main Entrypoints &mdash; omc3 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Harpy" href="../harpy/index.html" />
+    <link rel="prev" title="Welcome to omc3’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> omc3
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Main Entrypoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-omc3.hole_in_one">Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#entrypoint-hole-in-one">Entrypoint hole_in_one</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-omc3.madx_wrapper">MAD-X</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#entrypoint-madx-wrapper">Entrypoint madx_wrapper</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-omc3.tbt_converter">Converter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#entrypoint-tbt-converter">Entrypoint tbt_converter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-omc3.plot_spectrum">Plotting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#plot-spectrum">Plot Spectrum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../harpy/index.html">Harpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model/index.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics_measurements/index.html">Optics Measurements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plotting/index.html">Plot-Subfunctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tbt/index.html">Turn-by-Turn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">Utils</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">omc3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Main Entrypoints</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/entrypoints/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="main-entrypoints">
+<h1>Main Entrypoints<a class="headerlink" href="#main-entrypoints" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-omc3.hole_in_one">
+<span id="analysis"></span><h2>Analysis<a class="headerlink" href="#module-omc3.hole_in_one" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entrypoint-hole-in-one">
+<h3>Entrypoint hole_in_one<a class="headerlink" href="#entrypoint-hole-in-one" title="Permalink to this headline">¶</a></h3>
+<p>Created on 27/01/19</p>
+<dl class="field-list simple">
+<dt class="field-odd">author</dt>
+<dd class="field-odd"><p>Lukas Malina</p>
+</dd>
+</dl>
+<dl>
+<dt>Top-level script, which computes:</dt><dd><p>frequency spectra of Turn-by-Turn BPM data
+various lattice optics parameters from frequency spectra
+various lattice optics parameters from Turn-by-Turn BPM data</p>
+</dd>
+<dt>Generally, analysis flows as follows:</dt><dd><p>Turn-by-Turn BPM data   ---&gt;    frequency spectra   ---&gt;    various lattice optics parameters</p>
+</dd>
+<dt>Stages represented by different files:</dt><dd><p>Sdds file:  .sdds      ---&gt;   Tfs files: .lin[xy]  ---&gt;    Tfs files: .tfs</p>
+</dd>
+<dt>To run either of the two or both steps, use options:</dt><dd><dl class="option-list">
+<dt><kbd><span class="option">--harpy</span></kbd></dt>
+<dd><p>--optics</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="function">
+<dt id="omc3.hole_in_one.hole_in_one_entrypoint">
+<code class="sig-prename descclassname">omc3.hole_in_one.</code><code class="sig-name descname">hole_in_one_entrypoint</code><span class="sig-paren">(</span><em class="sig-param">opt</em>, <em class="sig-param">rest</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/omc3/hole_in_one.html#hole_in_one_entrypoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omc3.hole_in_one.hole_in_one_entrypoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs frequency analysis and measures lattice optics.</p>
+<dl>
+<dt>Hole_in_one Kwargs:</dt><dd><ul>
+<li><p><strong>harpy</strong>: Runs frequency analysis</p>
+<p>Flags: <strong>--harpy</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>optics</strong>: Measures the lattice optics</p>
+<p>Flags: <strong>--optics</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+</ul>
+</dd>
+<dt>Harpy Kwargs:</dt><dd><ul>
+<li><p><strong>files</strong>: TbT files to analyse</p>
+<p>Flags: <strong>--files</strong>
+Required: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</li>
+<li><p><strong>outputdir</strong>: Output directory.</p>
+<p>Flags: <strong>--outputdir</strong>
+Required: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</li>
+<li><p><strong>to_write</strong>: Choose the type of output.</p>
+<p>Flags: <strong>--to_write</strong>
+Choices: <code class="docutils literal notranslate"><span class="pre">('lin',</span> <span class="pre">'spectra',</span> <span class="pre">'full_spectra',</span> <span class="pre">'bpm_summary')</span></code>
+Default: <code class="docutils literal notranslate"><span class="pre">['lin',</span> <span class="pre">'bpm_summary']</span></code></p>
+</li>
+<li><p><strong>turns</strong> <em>(int)</em>: Turn index to start and first turn index to be ignored.</p>
+<p>Flags: <strong>--turns</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">50000]</span></code></p>
+</li>
+<li><p><strong>unit</strong> <em>(str)</em>: A unit of TbT BPM orbit data. All cuts and output are in ‘m’.</p>
+<p>Flags: <strong>--unit</strong>
+Choices: <code class="docutils literal notranslate"><span class="pre">('m',</span> <span class="pre">'cm',</span> <span class="pre">'mm',</span> <span class="pre">'um')</span></code>
+Default: <code class="docutils literal notranslate"><span class="pre">m</span></code></p>
+</li>
+<li><p><strong>tbt_datatype</strong> <em>(str)</em>: Choose datatype from which to import (e.g LHC binary SDDS, numpy npz).</p>
+<p>Flags: <strong>--tbt_datatype</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">LHC</span></code></p>
+</li>
+</ul>
+<p><em>--Cleaning--</em></p>
+<ul>
+<li><p><strong>clean</strong>: If present, the data are first cleaned.</p>
+<p>Flags: <strong>--clean</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>bad_bpms</strong>: Bad BPMs to clean.</p>
+<p>Flags: <strong>--bad_bpms</strong></p>
+</li>
+<li><p><strong>first_bpm</strong> <em>(str)</em>: First BPM in the measurement.
+Used to resynchronise the TbT data with model.</p>
+<p>Flags: <strong>--first_bpm</strong></p>
+</li>
+<li><p><strong>keep_dominant_bpms</strong>: If present, will not remove BPMs dominating an SVD mode,
+removes just its contribution to the mode.</p>
+<p>Flags: <strong>--keep_dominant_bpms</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>keep_exact_zeros</strong>: If present, will not remove BPMs with exact zeros in TbT data.</p>
+<p>Flags: <strong>--keep_exact_zeros</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>max_peak</strong> <em>(float)</em>: Removes BPMs where the maximum orbit &gt; limit.</p>
+<p>Flags: <strong>--max_peak</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">0.02</span></code></p>
+</li>
+<li><p><strong>model</strong>: Model for BPM locations</p>
+<p>Flags: <strong>--model</strong></p>
+</li>
+<li><p><strong>opposite_direction</strong>: If present, beam in the opposite direction to model
+is assumed for resynchronisation of BPMs.</p>
+<p>Flags: <strong>--opposite_direction</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>peak_to_peak</strong> <em>(float)</em>: Peak to peak amplitude cut. This removes BPMs,
+where abs(max(turn values) - min(turn values)) &lt;= threshold.</p>
+<p>Flags: <strong>--peak_to_peak</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">1e-08</span></code></p>
+</li>
+<li><p><strong>sing_val</strong> <em>(int)</em>: Keep this amount of largest singular values.</p>
+<p>Flags: <strong>--sing_val</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">12</span></code></p>
+</li>
+<li><p><strong>svd_dominance_limit</strong> <em>(float)</em>: Limit for single BPM dominating a mode.</p>
+<p>Flags: <strong>--svd_dominance_limit</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">0.925</span></code></p>
+</li>
+<li><p><strong>wrong_polarity_bpms</strong>: BPMs with swapped polarity in both planes.</p>
+<p>Flags: <strong>--wrong_polarity_bpms</strong></p>
+</li>
+</ul>
+<p><em>--Frequency Analysis--</em></p>
+<ul>
+<li><p><strong>autotunes</strong> <em>(str)</em>: The main tunes are guessed as the strongest line in SV^T matrix
+frequency spectrum: Synchrotron tune below ~0.03, betatron tunes above ~0.03.</p>
+<p>Flags: <strong>--autotunes</strong>
+Choices: <code class="docutils literal notranslate"><span class="pre">('all',</span> <span class="pre">'transverse')</span></code></p>
+</li>
+<li><p><strong>is_free_kick</strong>: If present, it will perform the free kick phase correction</p>
+<p>Flags: <strong>--free_kick</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>natdeltas</strong> <em>(float)</em>: Guess for the offsets of natural tunes from
+the driven tunes (x, y, z). Disabled when set to 0.</p>
+<p>Flags: <strong>--natdeltas</strong></p>
+</li>
+<li><p><strong>nattunes</strong> <em>(float)</em>: Guess for the natural tunes (x, y, z).  Disabled when set to 0.</p>
+<p>Flags: <strong>--nattunes</strong></p>
+</li>
+<li><p><strong>output_bits</strong> <em>(int)</em>: Number (frequency, complex coefficient) pairs in the output
+is up to 2 ** output_bits (maximal in case full spectra is output).
+There is one pair (with maximal amplitude of complex coefficient) per interval
+of size 2 ** (- output_bits - 1).</p>
+<p>Flags: <strong>--output_bits</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">12</span></code></p>
+</li>
+<li><p><strong>tolerance</strong> <em>(float)</em>: Tolerance specifying an interval in frequency domain,
+where to look for the tunes.</p>
+<p>Flags: <strong>--tolerance</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">0.01</span></code></p>
+</li>
+<li><p><strong>tune_clean_limit</strong> <em>(float)</em>: The tune cleaning wont remove BPMs because of measured
+tune outliers closer to the average tune than this limit.</p>
+<p>Flags: <strong>--tune_clean_limit</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">1e-05</span></code></p>
+</li>
+<li><p><strong>tunes</strong> <em>(float)</em>: Guess for the main tunes [x, y, z]. Tunez is disabled when set to 0</p>
+<p>Flags: <strong>--tunes</strong></p>
+</li>
+<li><p><strong>turn_bits</strong> <em>(int)</em>: Number (frequency, complex coefficient) pairs in the calculation
+is 2 ** turn_bits, i.e. the difference between two neighbouring frequencies
+is 2 ** (- turn_bits - 1).</p>
+<p>Flags: <strong>--turn_bits</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">20</span></code></p>
+</li>
+<li><p><strong>window</strong> <em>(str)</em>: Windowing function to be used for frequency analysis.</p>
+<p>Flags: <strong>--window</strong>
+Choices: <code class="docutils literal notranslate"><span class="pre">('rectangle',</span> <span class="pre">,</span> <span class="pre">'hann',</span> <span class="pre">'hamming',</span> <span class="pre">'nuttal3',</span> <span class="pre">'nuttal4')</span></code>
+Default: <code class="docutils literal notranslate"><span class="pre">hann</span></code></p>
+</li>
+</ul>
+</dd>
+<dt>Optics Kwargs:</dt><dd><ul>
+<li><p><strong>files</strong>: Files for analysis</p>
+<p>Flags: <strong>--files</strong>
+Required: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</li>
+<li><p><strong>outputdir</strong>: Output directory</p>
+<p>Flags: <strong>--outputdir</strong>
+Required: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</li>
+<li><p><strong>calibrationdir</strong> <em>(str)</em>: Path to calibration files directory.</p>
+<p>Flags: <strong>--calibrationdir</strong></p>
+</li>
+<li><p><strong>coupling_method</strong> <em>(int)</em>: Coupling analysis option: disabled, 1 BPM or 2 BPMs method</p>
+<p>Flags: <strong>--coupling_method</strong>
+Choices: <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>
+Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</li>
+<li><p><strong>nonlinear</strong>: Calculate higher order RDTs</p>
+<p>Flags: <strong>--nonlinear</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>only_coupling</strong>: Calculate only coupling.</p>
+<p>Flags: <strong>--only_coupling</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>range_of_bpms</strong> <em>(int)</em>: Range of BPMs for beta from phase calculation</p>
+<p>Flags: <strong>--range_of_bpms</strong>
+Choices: <code class="docutils literal notranslate"><span class="pre">(5,</span> <span class="pre">7,</span> <span class="pre">9,</span> <span class="pre">11,</span> <span class="pre">13,</span> <span class="pre">15)</span></code>
+Default: <code class="docutils literal notranslate"><span class="pre">11</span></code></p>
+</li>
+<li><p><strong>three_bpm_method</strong>: Use 3 BPM method in beta from phase</p>
+<p>Flags: <strong>--three_bpm_method</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>union</strong>: If present, the phase advances are calculate for union of BPMs
+with at least 3 valid measurements, instead of intersection .</p>
+<p>Flags: <strong>--union</strong>
+Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+</ul>
+</dd>
+</dl>
+<p>Accelerator Kwargs:  TODO</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-omc3.madx_wrapper">
+<span id="mad-x"></span><h2>MAD-X<a class="headerlink" href="#module-omc3.madx_wrapper" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entrypoint-madx-wrapper">
+<h3>Entrypoint madx_wrapper<a class="headerlink" href="#entrypoint-madx-wrapper" title="Permalink to this headline">¶</a></h3>
+<p>Runs MADX with a file or a string as an input.
+If defined, writes the processed MADX script and logging output into files.</p>
+<dl class="simple">
+<dt>Usage:</dt><dd><p>python madx_wrapper.py --file your_madx_file.madx</p>
+</dd>
+</dl>
+<dl class="exception">
+<dt id="omc3.madx_wrapper.MadxError">
+<em class="property">exception </em><code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">MadxError</code><a class="reference internal" href="../_modules/omc3/madx_wrapper.html#MadxError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omc3.madx_wrapper.MadxError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="omc3.madx_wrapper.run_file">
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">run_file</code><span class="sig-paren">(</span><em class="sig-param">input_file</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">log_file=None</em>, <em class="sig-param">madx_path='/home/travis/build/pylhc/omc3/bin/madx-linux64-gnu'</em>, <em class="sig-param">cwd=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/omc3/madx_wrapper.html#run_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omc3.madx_wrapper.run_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs MADX in a subprocess.</p>
+<dl class="attribute">
+<dt id="omc3.madx_wrapper.input_file">
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">input_file</code><a class="headerlink" href="#omc3.madx_wrapper.input_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>MADX input file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="omc3.madx_wrapper.output_file">
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">output_file</code><a class="headerlink" href="#omc3.madx_wrapper.output_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>If given writes MADX script.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="omc3.madx_wrapper.log_file">
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">log_file</code><a class="headerlink" href="#omc3.madx_wrapper.log_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>If given writes MADX logging output.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="omc3.madx_wrapper.madx_path">
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">madx_path</code><a class="headerlink" href="#omc3.madx_wrapper.madx_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to MADX executable</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="omc3.madx_wrapper.run_string">
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">run_string</code><span class="sig-paren">(</span><em class="sig-param">input_string</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">log_file=None</em>, <em class="sig-param">madx_path='/home/travis/build/pylhc/omc3/bin/madx-linux64-gnu'</em>, <em class="sig-param">cwd=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/omc3/madx_wrapper.html#run_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omc3.madx_wrapper.run_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs MADX in a subprocess.</p>
+<dl class="attribute">
+<dt id="omc3.madx_wrapper.input_string">
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">input_string</code><a class="headerlink" href="#omc3.madx_wrapper.input_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>MADX input string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">output_file</code></dt>
+<dd><p>If given writes MADX script.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">log_file</code></dt>
+<dd><p>If given writes MADX logging output.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="sig-prename descclassname">omc3.madx_wrapper.</code><code class="sig-name descname">madx_path</code></dt>
+<dd><p>Path to MADX executable</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-omc3.tbt_converter">
+<span id="converter"></span><h2>Converter<a class="headerlink" href="#module-omc3.tbt_converter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entrypoint-tbt-converter">
+<h3>Entrypoint tbt_converter<a class="headerlink" href="#entrypoint-tbt-converter" title="Permalink to this headline">¶</a></h3>
+<p>Created on 29/08/19</p>
+<dl class="field-list simple">
+<dt class="field-odd">author</dt>
+<dd class="field-odd"><p>Lukas Malina</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Top-level script, which converts turn-by-turn files from various formats to LHC binary SDDS files.</dt><dd><p>Optionally, it can replicate files with added noise.</p>
+</dd>
+</dl>
+<dl class="function">
+<dt id="omc3.tbt_converter.converter_entrypoint">
+<code class="sig-prename descclassname">omc3.tbt_converter.</code><code class="sig-name descname">converter_entrypoint</code><span class="sig-paren">(</span><em class="sig-param">opt</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/omc3/tbt_converter.html#converter_entrypoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omc3.tbt_converter.converter_entrypoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts turn-by-turn files from various formats to LHC binary SDDS files.
+Optionally can replicate files files with added noise.</p>
+<dl>
+<dt>Converter Kwargs:</dt><dd><ul>
+<li><p><strong>files</strong>: TbT files to convert</p>
+<p>Flags: <strong>--files</strong>
+Required: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</li>
+<li><p><strong>outputdir</strong>: Output directory.</p>
+<p>Flags: <strong>--outputdir</strong>
+Required: <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</li>
+<li><p><strong>tbt_datatype</strong> <em>(str)</em>: Choose datatype from which to import (e.g LHC binary SDDS).</p>
+<p>Flags: <strong>--tbt_datatype</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">lhc</span></code></p>
+</li>
+<li><p><strong>realizations</strong> <em>(int)</em>: Number of copies with added noise.</p>
+<p>Flags: <strong>--realizations</strong>
+Default: <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+</li>
+<li><p><strong>noise_levels</strong> <em>(float)</em>: Sigma of added Gaussian noise.</p>
+<p>Flags: <strong>--noise_levels</strong>
+Default: None</p>
+</li>
+<li><p><strong>use_average</strong> <em>(bool)</em>: If set, returned sdds only contains the average over all particle/bunches.</p>
+<p>Flags: <strong>--use_average</strong>
+Default: False</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-omc3.plot_spectrum">
+<span id="plotting"></span><h2>Plotting<a class="headerlink" href="#module-omc3.plot_spectrum" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plot-spectrum">
+<h3>Plot Spectrum<a class="headerlink" href="#plot-spectrum" title="Permalink to this headline">¶</a></h3>
+<p>Spectrum plotter for frequency analysis output-data (supports also DRIVE output).</p>
+<p>The spectra can be either plotted as <cite>stem</cite>-plots or as <cite>waterfall</cite>-plots.
+The stem-plots can be in any combination: split by given files, split by given
+bpms or combined in any way (by usage of the <cite>combine_by</cite> option).
+Note that if both of those are false (as is default)
+there will anyway be only one waterfall plot per given input file.</p>
+<p>In case of split-by-file, plots are saved in a sub-directory of
+the given <cite>output_dir</cite> with the name of the original TbT file.
+In case of split by bpm the plots will have the bpm-name in their filename.</p>
+<p>The <cite>lines_tunes</cite> and <cite>lines_nattunes</cite> lists accept tuples of multipliers for
+the respective tunes, which define the resonance lines plotted into the
+spectrum as well. A dashed line will indicate the average of all tunes
+given in the data of one figure, while a semi-transparent area will indicate
+min- and max- values of this line.</p>
+<p>With <cite>lines_manual</cite>, one can plot vertical lines at manual locations (see
+parameter specs below).</p>
+<p>The function returns two dictionaries, where the first dictionary contains the
+stem plots and the second one the waterfall plots. They are identifyable
+by unique id’s which depend on which combination of merging the spectra into
+one figure is used.</p>
+<p><strong>Arguments:</strong></p>
+<p><em>--Required--</em></p>
+<ul class="simple">
+<li><p><strong>files</strong>: List of paths to the spectrum files. The files need to be given
+without their ‘.lin’/’.amps[xy]’,’.freqs[xy]’ endings. (So usually the path
+of the TbT-Data file.)</p></li>
+</ul>
+<p><em>--Optional--</em></p>
+<ul>
+<li><p><strong>amp_limit</strong> <em>(float)</em>: All amplitudes &lt;= limit are filtered.
+This value needs to be at least 0 to filter non-found frequencies.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">0.0</span></code></p>
+</li>
+<li><p><strong>bpms</strong>: List of BPMs for which spectra will be plotted. If not given all BPMs are used.</p></li>
+<li><p><strong>combine_by</strong>: Choose how to combine the data into figures.</p>
+<p>Choices: <code class="docutils literal notranslate"><span class="pre">['bpms',</span> <span class="pre">'files']</span></code>
+Default: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
+</li>
+<li><p><strong>filetype</strong> <em>(str)</em>: Filetype to save plots as (i.e. extension without “.”)</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">pdf</span></code></p>
+</li>
+<li><p><strong>lines_manual</strong> <em>(DictAsString)</em>: List of manual lines to plot. Need to contain arguments for axvline,
+and may contain the additional key “loc” which is one of [‘bottom’, ‘top’, ‘line bottom’, ‘line top’]
+and places the label as text at the given location.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
+</li>
+<li><p><strong>lines_nattunes</strong> <em>(tuple)</em>: List of natural tune lines to plot</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[(1,</span> <span class="pre">0),</span> <span class="pre">(0,</span> <span class="pre">1)]</span></code></p>
+</li>
+<li><p><strong>lines_tunes</strong> <em>(tuple)</em>: list of tune lines to plot</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[(1,</span> <span class="pre">0),</span> <span class="pre">(0,</span> <span class="pre">1)]</span></code></p>
+</li>
+<li><p><strong>manual_style</strong> <em>(DictAsString)</em>: Additional Style parameters which update the set of predefined ones.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">{}</span></code></p>
+</li>
+<li><p><strong>ncol_legend</strong> <em>(int)</em>: Number of bpm legend-columns. If &lt; 1 no legend is shown.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+</li>
+<li><p><strong>output_dir</strong> <em>(str)</em>: Directory to write results to. If no option is given, plots will not be saved.</p></li>
+<li><p><strong>plot_type</strong>: Choose plot type (Multiple choices possible).</p>
+<p>Choices: <code class="docutils literal notranslate"><span class="pre">['stem',</span> <span class="pre">'waterfall']</span></code>
+Default: <code class="docutils literal notranslate"><span class="pre">['stem']</span></code></p>
+</li>
+<li><p><strong>rescale</strong>: Flag to rescale plots amplitude to max-line = 1</p>
+<p>Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>show_plots</strong>: Flag to show plots</p>
+<p>Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>waterfall_cmap</strong> <em>(str)</em>: Colormap to use for waterfall plot.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">inferno</span></code></p>
+</li>
+<li><p><strong>waterfall_common_plane_colors</strong>: Same colorbar scale for both planes in waterfall plots.</p>
+<p>Action: <code class="docutils literal notranslate"><span class="pre">store_true</span></code></p>
+</li>
+<li><p><strong>waterfall_line_width</strong>: Line width of the waterfall frequency lines. “auto” fills them up until the next one.</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</li>
+<li><p><strong>xlim</strong> <em>(float)</em>: Limits on the x axis (Tupel)</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0.5]</span></code></p>
+</li>
+<li><p><strong>ylim</strong> <em>(float)</em>: Limits on the y axis (Tupel)</p>
+<p>Default: <code class="docutils literal notranslate"><span class="pre">[1e-09,</span> <span class="pre">1.0]</span></code></p>
+</li>
+</ul>
+<dl class="function">
+<dt id="omc3.plot_spectrum.get_reshuffled_tab20c">
+<code class="sig-prename descclassname">omc3.plot_spectrum.</code><code class="sig-name descname">get_reshuffled_tab20c</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/omc3/plot_spectrum.html#get_reshuffled_tab20c"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#omc3.plot_spectrum.get_reshuffled_tab20c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reshuffel tab20c so that the colors change between next lines.
+Needs to be up here as it is used in DEFAULTS which is loaded early.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../harpy/index.html" class="btn btn-neutral float-right" title="Harpy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to omc3’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
